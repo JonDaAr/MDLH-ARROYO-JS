@@ -184,11 +184,10 @@ function rellenarcards(array, contaniner2){
       alt="Cinema">
     <div class="cartas card-body">
       <h2 class="card-title">${evento.name}</h2>
-      <p class="card-text">${evento.description}</p>
+      <p class="card-text">${evento.category}</p>
       <a href="./pages/Details.html" class="boton btn btn-primary">Go</a>
     </div>
-    
-  </div>
+    </div>
     `
     contaniner2.appendChild(div)
   }
