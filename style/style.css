@@ -62,6 +62,7 @@ div>a{
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> form_search <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .form_search{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     background: linear-gradient(0deg, gray 0%, #efefef 100%);
@@ -70,6 +71,7 @@ div>a{
     width: 20rem;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Main <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -102,7 +104,13 @@ div>a{
 }
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Contac <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.barra{
+    height: 3rem;
+    background: linear-gradient(0deg, gray 0%, #efefef 100%);
+}
 main{
+    min-height: 56rem;
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
 }
@@ -125,27 +133,30 @@ form>button{
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>< Details <<<<<<<<<<<<<<<<<<<<<<<< */
 .deta_main{
-    background: linear-gradient(45deg, #D90368 0%, black 75%);
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(45deg, #D90368 0%, black 95%);
 }
-.detail{
-    margin: 3rem;
-    background-color: red;
-    width: 80%;
-    height: 80vh;
+.DetailCards{
+    background-color: #E0D9E3;
+    width: 95%;
+    border-radius:50px;
+}
+.detailtext{
     display: flex;
+    align-items: center;
 }
-.deta_img{
-    margin: 1rem;
-    background-color: blue;
-    width: 50%;
-    height: 95%;
+.ext-muted{
+    display: flex;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
 }
-.deta_info{
-    margin: 1rem;
-    background-color: green;
-    width: 50%;
-    height: 95%;
+.img-fluid{
+    width: 100%;
+    height: 100%;
 }
+
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Stats <<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 .main_t{
     padding: 1rem;
@@ -231,8 +242,18 @@ table{
 
 }
 
-/* >>>>>>>>>>>>>>>>>>>>>>> 784 resolucion <<<<<<<<<<<<<<< */
-@media screen and (max-width:784px) {
+/* >>>>>>>>>>>>>>>>>>>>>>> 789 resolucion <<<<<<<<<<<<<<< */
+@media screen and (max-width:789px) {
+    .deta_main{
+        margin-top: 3rem;
+        padding: 50px;
+        align-items: center;
+        flex-wrap: wrap;
+        background: linear-gradient(45deg, #D90368 0%, black 95%);
+    }
+    .detailtext{
+        padding: 0 40px;
+    }
 
     #nav_1{
         display: none;
@@ -265,17 +286,9 @@ table{
     .logo_AE{
         width: 100%;
     }
-    
-    .form_search{
-        display: inline-block;
-        width: 100%;
-        text-align: center;
+    main{
+        padding-top: 1rem;
     }
-    .busca{
-        display: flex;
-        width: 100%;
-    }
-    
 
     .card{
         width: 30rem;
@@ -288,6 +301,7 @@ table{
         gap: 1rem;
     }
 }
+
 
 /* >>>>>>>>>>>>>>>>>>>>>>> 538 resolucion <<<<<<<<<<<<<<< */
 @media screen and (max-width:538px) {
@@ -343,6 +357,14 @@ table{
 @media screen and (max-width:375px){
     table{
         transform: scale(0.8);
+    }
+
+    .detailtext{
+        padding: 0px 15px 20px;
+        margin-bottom: 0;
+    }
+    .detailtext>div>p{
+        margin-bottom: 0.2rem;
     }
 }
 
