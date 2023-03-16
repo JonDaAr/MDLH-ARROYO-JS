@@ -14,7 +14,7 @@ function rellenarcards(array, contaniner2){
     <div class="card">
     <img class="img_card card-img-top" src="https://thumbs.gfycat.com/HoarseOccasionalDikkops-max-1mb.gif" alt="not found">
     <div class="cartas card-body">
-      <h2 class="card-title">Lo estamos buscamos pero no lo estamos encontrando</h2>
+      <h2 class="card-title">i don´t undestand</h2>
       
     </div>
     </div>`
