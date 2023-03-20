@@ -1,8 +1,24 @@
-import data from "./data.js";
-const dataE = data.events.slice();
 const $contai = document.getElementById(`container2`);
 const $check = document.getElementById('checknav');
 const $buscar = document.querySelector('input[type="search"]');
+
+let dataE = [];
+let data = []; 
+async function getData() {
+  fetch("/amazing.json")
+    .then(res => res.json())
+    .then(res =>{
+      data=res
+      dataE=data.events;
+      rellenarcards(dataE,$contai)
+      let categories=filtercategory(dataE)
+      createcheck(categories,$check)
+    })
+    .catch(error => console.log(error))
+}
+
+getData();
+
 /////// Funciones Cards //////////
 
 function rellenarcards(array, contaniner2){

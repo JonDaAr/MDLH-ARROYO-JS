@@ -70,7 +70,7 @@ const data = {
         "category":"Costume Party",
         "place":"Room C",
         "capacity":12000,
-        "estimate":9000,
+        "estimate":9000,git 
         "price":12
       },
       {
@@ -172,49 +172,3 @@ const data = {
     ]
   }
 export default data
-
-// import data from "./index.js"
-// //import rellenarcards() from "./index.js"
-
-// const container2 = document.getElementById(`container2`)
-// const $check = document.getElementById(`checknav`)
-
-// const filtercategory = (array) => {
-//     let categories = (array.events).map(category=> category.category)
-//     categories = categories.reduce((acumulador,elemento)=>{
-//         if(!acumulador.includes(elemento)){
-//             acumulador.push(elemento);
-//         }
-//         return acumulador
-//     },[])
-//     return categories
-// }
-
-
-// let categories=filtercategory(data)
-
-// function createcheck(array,conteiner){
-//     for(let evento of array){
-//         let div=document.createElement("div");
-//         div.className = "okey"
-//         div.innerHTML += `<div">
-//         <div class="form-check form-check-inline">
-//         <input class="form-check-input" type="checkbox" name="check"
-//           id="${evento}" value="${evento}">
-//         <label class="form-check-label" for="evento">${evento}</label>
-//       </div>
-//         </div>
-//         `
-//         conteiner.appendChild(div)
-//     }
-// }
-// createcheck(categories,checknav);
-
-// const filtercheck = (array) => {
-//     let check = document.querySelectorAll(`input[type="checkbox"]:checked`);
-//     console.log(check)
-//     let filtroarray = array.filter(element => element.type.includes(checked))
-//     return filtroarray
-// }
-
-// checked

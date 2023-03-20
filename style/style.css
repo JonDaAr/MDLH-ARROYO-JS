@@ -166,6 +166,7 @@ table{
     font-size: 1rem;
  }
  .t_title{
+    height: 1rem;
     background-color: #D90368;
     color: #efefef;
     text-align: left;
@@ -173,6 +174,7 @@ table{
  }
 
  td, th {
+    height: ;
     padding: 10px 15px;
  }
  tbody th{
@@ -184,6 +186,7 @@ table{
  }
 
  .t_subtitle{
+    height: 0.5rem;
     background-color: #e4a1c0;
  }
 .div_table{

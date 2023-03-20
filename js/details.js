@@ -1,11 +1,20 @@
-import data from "./data.js";
 let detailsContainer = document.querySelector("#container2");
 
-const queryString = location.search
-const params = new URLSearchParams(queryString)
-const CardID = params.get('id')
-const card = data.events.find(card => card._id == CardID)
-
+let data = []; 
+async function getData() {
+  fetch("/amazing.json")
+    .then(res => res.json())
+    .then(res =>{
+      data=res
+      const queryString = location.search
+      const params = new URLSearchParams(queryString)
+      const CardID = params.get('id')
+      const card = data.events.find(card => card._id == CardID)
+      CreateCard(card,detailsContainer)
+    })
+    .catch(error => console.log(error))
+}
+getData();
 
 function CreateCard(card,container) {
     let div = document.createElement('div')
@@ -31,4 +40,3 @@ function CreateCard(card,container) {
     container.appendChild(div)
     
 }
-CreateCard(card,detailsContainer)
