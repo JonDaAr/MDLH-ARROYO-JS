@@ -60,6 +60,11 @@ div>a{
 }
 
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> form_search <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+.form-check{
+    display: inline-block;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .form_search{
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +84,7 @@ div>a{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .img_card{
@@ -109,10 +115,12 @@ div>a{
     background: linear-gradient(0deg, gray 0%, #efefef 100%);
 }
 main{
+    padding-top: 1rem;
     min-height: 36rem;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 form{
     font-size: 3rem;
@@ -247,6 +255,9 @@ table{
 
 /* >>>>>>>>>>>>>>>>>>>>>>> 789 resolucion <<<<<<<<<<<<<<< */
 @media screen and (max-width:789px) {
+    .form_search{
+        padding-top: 2rem;
+    }
     .deta_main{
         margin-top: 3rem;
         padding: 50px;
@@ -286,6 +297,7 @@ table{
 }
 /* >>>>>>>>>>>>>>>>>>>>>>> 735 resolucion <<<<<<<<<<<<<<< */
 @media screen and (max-width:735px) {
+    
     .logo_AE{
         width: 100%;
     }
@@ -355,6 +367,7 @@ table{
 
 /* >>>>>>>>>>>>>>>>>>>>>>> 375 resolucion <<<<<<<<<<<<<<< */
 @media screen and (max-width:375px){
+    
     table{
         transform: scale(0.8);
     }

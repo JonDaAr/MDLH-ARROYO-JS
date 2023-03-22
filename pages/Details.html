@@ -52,13 +52,32 @@
 </nav>
 
 
-        <main class="deta_main">
-          <div id="container2" class="DetailCards">
-          </div>
-        </main>
+        <main class="deta_main" id="app">
+          <template v-if="card">
 
+            <div id="container2" class="DetailCards">
+              <div class="row g-2">
+                <div class="col-md-4">
+                  <img v-bind:src="card.image" class="img-fluid rounded-start" :alt="card.name">
+                </div>
+                <div class="detailtext col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">{{card.name}}</h5>
+                    <p class="card-text">{{card.category}}</p>
+                    <p class="card-text"><b>Place:</b> {{card.place}}</p>
+                    <p class="card-text"><b>Descripcion:</b> {{card.description}}</p>
+                    <p class="card-text"><b>Capacity:</b> {{card.assistance}}/{{card.capacity}}</p>
+                    <p class="card-text"><b>Precio:</b>$ {{card.price}}</p>
+                    <p class="card-text"><small class="text-muted">{{card.date}}</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </main>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-        <script type="module" src="/js/details.js"></script>
+      <script src="/js/app.Details.js"></script>
     <footer class="text-center text-white" style="background-color:rgba(0, 0, 0, 0.2);">
       <!-- Grid container -->
       <div class="container pt-4">

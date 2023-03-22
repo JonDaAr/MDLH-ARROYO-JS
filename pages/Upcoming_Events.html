@@ -50,42 +50,75 @@
     </div>
   </div>
 </nav>
-    <header>
-
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>> Carousel <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-        <div class="carru">
-          <div>
-            <a href="/Index.html" role="button">
-              <img class="arrow" src="/assets/images/prev.png" alt="prev" style="width: 50px;">
-            </a>
-          </div>
-          <div>
-            <a href="#" class="menu_H">Upcoming Events</a>
-          </div>
-        <div>
-          <a href="/Pages/Past_Events.html" role="button">
-            <img class="arrow" src="/assets/images/next.png" alt="next" style="width: 50px;">
-          </a>
-        </div>
+<div id="app"> 
+  <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>Falso Carousel <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+  <div class="carru">
+    <div>
+      <a href="/pages/Stats.html" role="button">
+        <img class="arrow" src="/assets/images/prev.png" alt="prev"
+          style="width: 50px;">
+      </a>
+    </div>
+    <div>
+      <a href="#" class="menu_H">Home</a>
+    </div>
+    <div>
+      <a href="./Pages/Upcoming_Events.html" role="button">
+        <img class="arrow" src="/assets/images/next.png" alt="next"
+          style="width: 50px;">
+      </a>
+    </div>
+  </div>
+  <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Form <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+  <div class="form_search" id="checknav" >
+    <div>
+      <template v-if="category" v-for=" cate of category ">
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" v-on:change="filtro" v-model="checked" name="check"
+        v-bind:id="cate" :value="cate">
+        <label class="form-check-label" v-bind:for="cate">{{cate}}</label>
       </div>
+    </template>
+  </div>
+  
+  <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Search<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
+  <div>
+    <div class="busca input-group dw-50 p-3">
+      <input type="search" v-on:keyup="filtro" v-model="searchValue" class="form-control" placeholder="Search.."
+      aria-label="Recipient's username" id="Search">
+    </div>
+  </div>
+  
+</div>
 
-          <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Form <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-          <div class="form_search" id="checknav">
-            <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Search<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<-->
-            <div>
-              <div class="busca input-group dw-50 p-3">
-                <input type="search" class="form-control" placeholder="Search.."
-                  aria-label="Recipient's username" id="Search">
-              </div>
+
+<main>
+      <template v-if="eventsFilter.length > 0" v-for=" evento of eventsFilter ">
+        <div class="allcards" id="container2">
+          <div class="card">
+            <img class="img_card card-img-top" v-bind:src="evento.image" :alt="evento.name">
+            <div class="cartas card-body">
+              <h2 class="card-title">{{evento.name}}</h2>
+              <p class="card-text">{{evento.category}}</p>
+              <a v-bind:href="'/pages/Details.html?id='+evento._id" class="boton btn btn-primary">Go</a>
             </div>
+          </div>
+        </div>
+      </template>
+      <template v-else>
+        <div class="card">
+          <img class="img_card card-img-top" src="https://thumbs.gfycat.com/HoarseOccasionalDikkops-max-1mb.gif" alt="not found">
+          <div class="cartas card-body">
+            <h2 class="card-title">i don´t undestand</h2>
             
           </div>
-    </header>
-    <main>
-      <div class="allcards" id="container2">
-      </div>
+          </div>
+      </template>
     </main>
-    <script type="module" src="/js/UpcomingEvents.js"></script>
+  
+</div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="/js/app_U_events.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <footer class="text-center text-white">
